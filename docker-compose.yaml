@@ -1,0 +1,20 @@
+version: "3.8"
+
+services: 
+    taxa_juros:
+        build: ./TaxaJuros/.
+        container_name: "TaxaJuros"
+        environment:
+            Valor_Taxa: "0.01"
+        ports:
+            - "8081:80"
+
+    calcula_juros:
+        build: ./CalculaJuros/.
+        container_name: "CalculaJuros"
+        environment:
+            Base_Url: "http://taxa_juros:8081"
+        ports:
+            - "8082:80"
+        depends_on:
+            - taxa_juros
