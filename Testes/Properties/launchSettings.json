@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Testes": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Valor_Taxa": "0.01"
+      }
+    }
+  }
+}

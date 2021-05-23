@@ -19,7 +19,7 @@ namespace CalculaJuros.Service
             return CalcularTaxaJuros(_valorInicial, _tempo, RecuperarTaxaJuros());
         }
 
-        private Calculo CalcularTaxaJuros(decimal _valorInicial, int _tempo, decimal _valorJuros)
+        public Calculo CalcularTaxaJuros(decimal _valorInicial, int _tempo, decimal _valorJuros)
         {
             Calculo calculo = new Calculo();
 
